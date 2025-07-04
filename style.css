@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+  background: #f2f2f2;
+  min-height: 100vh;
+  z-index: 0;
+  color: #111;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36vh; /* 40% of screen */
+  width: 100%;
+  background: green;
+  z-index: -1; /* behind everything */
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: green;
+  color: #fff;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  padding-right: 2.2rem;
+  padding-left: 2.2rem;
+  z-index: 1000;
+  text-align: center;
+  font-size: smaller;
+}
+.header-fixed h2 {
+  font-size: 1rem;
+}
+.header-fixed i {
+  margin-left: -20rem;
+}
+.content {
+  margin-top: 100px; /* space for fixed header */
+  padding: 1rem;
+}
+
+/* Balance Section */
+.balance-box {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.balance p {
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+.balance h1 {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+}
+
+.balance .sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+}
+
+.balance hr {
+  border: none;
+  height: 1px;
+  background-color: #cccccc; /* light gray line */
+  margin: 10px 0;
+}
+.vertical-divider {
+  width: 1px;
+  height: 20px; /* Adjust height as needed */
+  background-color: #ccc;
+}
+
+.balance-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  gap: 2rem;
+  margin-top: 0rem;
+}
+
+.balance-info p {
+  border: none;
+  flex: 1;
+  color: green;
+  font-weight: bold;
+}
+
+/* Action Buttons (Sticky via JS) */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  z-index: 10000;
+  position: sticky;
+  top: 75px;
+}
+.balance i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  border: 1px solid green;
+  border-radius: 50%;
+  color: green;
+}
+.balance p {
+  display: flex;
+  justify-content: space-between;
+}
+.action-buttons p {
+  background-color: white;
+  border-radius: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: .8rem;
+  font-weight: bold;
+}
+.action-buttons p i {
+  font-size: .8rem;
+  color: green;
+}
+.rotate {
+   display: inline-block; 
+  transform: rotate(90deg); 
+}
+.z {
+  font-size: 2px;
+}
+.action-buttons.fixed {
+  position: fixed;
+  top: 60px; /* just below green header */
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Transaction List */
+.activity {
+  margin-top: 1rem;
+}
+.activity-card i {
+   display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ width: 18px;
+ height: 18px;
+ font-size: 12px;
+ border: 1px solid green;
+ border-radius: 50%;
+ color: green;
+}
+.activity h3 {
+  margin-bottom: .8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* .activity-card { */
+  /* background: #fff; */
+  /* padding: 1rem; */
+  /* margin-bottom: 1rem; */
+  /* border-radius: 10px; */
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+  /* display: flex; */
+  /* justify-content: space-between; */
+/* } */
+.activity-card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: block; /* Important */
+}
+
+.activity-card h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  background-color: #e6e6e6;
+  padding: .5rem;
+  border-radius: 50px;
+  
+}
+
+.transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  gap: 1rem;
+}
+
+.transaction-row .left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.transaction-row .left p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #111;
+}
+.transaction-row .left i {
+  color: #1a1a1a;
+  border: none;
+  font-size: 1rem;
+}
+.transaction-row .right i {
+  color: #1a1a1a;
+  border: none;
+  font-size: 1rem;
+}
+.transaction-row .right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.transaction-row .right p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: green;
+}
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0;
+}
