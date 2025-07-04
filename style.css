@@ -19,7 +19,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 36vh; /* 40% of screen */
+  height: 37vh; /* 40% of screen */
   width: 100%;
   background: green;
   z-index: -1; /* behind everything */
@@ -112,11 +112,23 @@ body::before {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
   z-index: 10000;
   position: sticky;
+  gap: 0.5rem;
   top: 75px;
 }
+/* .action-buttons .right { */
+/* display: flex; */
+/* align-items: center;      */
+/* justify-content: center;  */
+/* background-color: white; */
+/* border-radius: 50px; */
+/* padding: 0.5rem 1rem; */
+/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+/* font-size: 0.9rem; */
+/* gap: 0.5rem; */
+/* } */
 .balance i {
   display: inline-flex;
   justify-content: center;
@@ -132,6 +144,27 @@ body::before {
   display: flex;
   justify-content: space-between;
 }
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.flex p {
+  font-size: 0.8rem;
+}
+.black {
+  color: #8c8c8c;
+}
+.green {
+  color: green;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
 .action-buttons p {
   background-color: white;
   border-radius: 50px;
@@ -140,16 +173,19 @@ body::before {
   padding-top: 5px;
   padding-bottom: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .action-buttons p i {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: green;
 }
 .rotate {
-   display: inline-block; 
-  transform: rotate(90deg); 
+  display: inline-block;
+  transform: rotate(90deg);
 }
 .z {
   font-size: 2px;
@@ -167,30 +203,30 @@ body::before {
   margin-top: 1rem;
 }
 .activity-card i {
-   display: inline-flex;
- justify-content: center;
- align-items: center;
- width: 18px;
- height: 18px;
- font-size: 12px;
- border: 1px solid green;
- border-radius: 50%;
- color: green;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  border: 1px solid green;
+  border-radius: 50%;
+  color: green;
 }
 .activity h3 {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 /* .activity-card { */
-  /* background: #fff; */
-  /* padding: 1rem; */
-  /* margin-bottom: 1rem; */
-  /* border-radius: 10px; */
-  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
-  /* display: flex; */
-  /* justify-content: space-between; */
+/* background: #fff; */
+/* padding: 1rem; */
+/* margin-bottom: 1rem; */
+/* border-radius: 10px; */
+/* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+/* display: flex; */
+/* justify-content: space-between; */
 /* } */
 .activity-card {
   background: #fff;
@@ -209,9 +245,8 @@ body::before {
   gap: 0.5rem;
   color: #737373;
   background-color: #e6e6e6;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 50px;
-  
 }
 
 .transaction-row {
