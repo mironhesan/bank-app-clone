@@ -116,7 +116,7 @@ body::before {
   z-index: 10000;
   position: sticky;
   gap: 0.5rem;
-  top: 75px;
+  top: 73px;
 }
 /* .action-buttons .right { */
 /* display: flex; */
