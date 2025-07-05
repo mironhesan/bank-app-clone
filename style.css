@@ -60,13 +60,16 @@ body::before {
   margin-top: 0.8rem;
   margin-right: 1.5rem;
 }
+.imgp {
+ margin-top: 3px;
+}
 .left-icons,
 .right-icons {
   display: flex;
   gap: 5px;
   align-items: center;
   width: 50px;
-  margin-right: 2.5rem;
+  margin-right: 2rem;
 }
 .header-fixed h2 {
   font-size: 1rem;
