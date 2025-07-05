@@ -19,7 +19,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 35vh; /* 40% of screen */
+  height: 43vh; /* 40% of screen */
   width: 100%;
   background: green;
   z-index: -1; /* behind everything */
@@ -33,13 +33,65 @@ body::before {
   background: green;
   color: #fff;
   padding-top: 2.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.7rem;
   padding-right: 2.2rem;
   padding-left: 2.2rem;
   z-index: 1000;
   text-align: center;
   font-size: smaller;
 }
+.status-bar {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.left-icons img {
+  width: 30px;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  margin-right: 1.5rem;
+}
+.left-icons,
+.right-icons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 50px;
+}
+.header-fixed h2 {
+  font-size: 1rem;
+}
+.header-fixed i {
+  position: absolute;
+  left: 1.5rem;
+  top: 2.8rem;
+}
+
+
+/* .header-fixed { */
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* background: green; */
+  /* color: #fff; */
+  /* padding-top: 2.5rem; */
+  /* padding-bottom: 1rem; */
+  /* padding-right: 2.2rem; */
+  /* padding-left: 2.2rem; */
+  /* z-index: 1000; */
+  /* text-align: center; */
+  /* font-size: smaller; */
+/* } */
 .header-fixed h2 {
   font-size: 1rem;
 }
@@ -96,7 +148,7 @@ body::before {
 }
 
 .balance p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #1a1a1a;
 }
 .balance h1 {
@@ -110,7 +162,7 @@ body::before {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #1a1a1a;
 }
 
@@ -208,7 +260,7 @@ body::before {
   padding-top: 4px;
   padding-bottom: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -228,7 +280,7 @@ body::before {
 }
 .action-buttons.fixed {
   position: fixed;
-  top: 60px; /* just below green header */
+  top: 80px; /* just below green header */
   left: 0;
   right: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
