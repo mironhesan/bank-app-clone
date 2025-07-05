@@ -19,7 +19,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 37vh; /* 40% of screen */
+  height: 41vh; /* 40% of screen */
   width: 100%;
   background: green;
   z-index: -1; /* behind everything */
@@ -50,7 +50,42 @@ body::before {
   margin-top: 100px; /* space for fixed header */
   padding: 1rem;
 }
-
+.dolar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+.debit-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.debit-flex i {
+  color: #1a1a1a !important;
+  border: none !important;
+  font-size: 1rem !important;
+}
+.flex-2 {
+  display: flex;
+  align-items: center;
+}
+.green-up {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.transaction-row .left {
+  font-weight:400 !important;
+}
+.debit {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+.black-down {
+  font-size: .75rem !important;
+  color:  #1a1a1a !important;
+}
 /* Balance Section */
 .balance-box {
   margin-top: 1rem;
